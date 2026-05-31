@@ -9,7 +9,7 @@ namespace DSA_Lab2 {
     public class DuplicatesFinder {
 
         private bool CheckArraySize<T>(List<T> arr) {
-            return arr == null || arr.Count == 1;
+            return arr == null || arr.Count <= 1;
         }
 
         public int BruteForce(List<int> arr) {
@@ -37,13 +37,12 @@ namespace DSA_Lab2 {
             //    throw new Exception("The bigeest element shouldn't be more than array size");
             //}
 
-            var sw = Stopwatch.StartNew();
+            //var sw = Stopwatch.StartNew();
 
             int n = arr.Count;
 
             List<int> freq = new List<int>();
             freq.AddRange(Enumerable.Repeat(0, arr.Max() + 1));
-            //freq.AddRange(Enumerable.Repeat(0, arr.Max() + 1));
 
             List<int> ans = new List<int>();
 
@@ -67,8 +66,8 @@ namespace DSA_Lab2 {
                 }
             }
 
-            sw.Stop();
-            Console.WriteLine($"Time spent: {sw.Elapsed}");
+            //sw.Stop();
+            //Console.WriteLine($"Time spent: {sw.Elapsed}");
             return ans;
         }
 

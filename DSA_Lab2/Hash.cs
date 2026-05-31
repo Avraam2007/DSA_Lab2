@@ -24,14 +24,14 @@ namespace DSA_Lab2 {
         }
 
         public int HashSum(string input) {
-            var sw = Stopwatch.StartNew();
+            //var sw = Stopwatch.StartNew();
             int hash = 0;
             foreach (char c in input) {
                 hash += (int)c;
             }
             hash %= this.mod;
-            sw.Stop();
-            Console.WriteLine($"Time spent: {sw.Elapsed}");
+            //sw.Stop();
+            //Console.WriteLine($"Time spent: {sw.Elapsed}");
             return hash;
         }
 
